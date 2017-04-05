@@ -22,7 +22,7 @@
       <label>url</label><br>
       <input #url><br>
       <label>quantity</label><br>
-      <input #quantity><br>
+      <input type="number" #quantity><br>
       <button (click)="submitForm(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
     </div>
   </div>

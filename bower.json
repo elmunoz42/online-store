@@ -14,7 +14,7 @@
     "instruments",
     "albums"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/elmunoz42/online-store",
   "private": true,
   "ignore": [
     "**/.*",

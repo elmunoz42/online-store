@@ -19,7 +19,17 @@ export class AlbumService {
   }
 
   getGoodById(goodId: string){
-    return this.angularFire.database.object('goods/' + goodId);
+    let otherGood;
+    let tempGood = this.angularFire.database.object('goods/' + goodId).subscribe(dataLastEmittedFromObserver => {
+      otherGood = dataLastEmittedFromObserver;
+      // let test = this.sanitizer.bypassSecurityTrustHtml(otherGood.videoUrl);
+      // console.log(test);
+      // otherGood.videoUrl = "<img src='" + this.sanitizer.bypassSecurityTrustHtml(otherGood.videoUrl) + "' alt='' />";
+      console.log(otherGood);
+    });
+    return otherGood;
+    // var tempVideoUrl: string = this.tempGood.videoUrl;
+    // this.tempGood.videoUrl = "<img src='" + this.sanitizer.bypassSecurityTrustHtml(tempVideoUrl) + "' alt='' />";
   }
 
   addGood(newGood: Good) {

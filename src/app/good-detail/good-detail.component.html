@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-md-6">
-    <div [innerHTML]='(goodToDisplay | async)?.videoUrl'>
-
-    </div>
+    <img [src]="(goodToDisplay | async)?.videoUrl | safe:goodToDisplay.videoUrl">
   </div>
   <div class="col-md-6">
     <div>

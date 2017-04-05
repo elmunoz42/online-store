@@ -12,6 +12,8 @@ import { AngularFireModule } from 'angularfire2';
 import { DataServiceService } from './data-service.service';
 import { AlbumService } from './album.service';
 import { GoodDetailComponent } from './good-detail/good-detail.component';
+import { SafePipePipe } from './safe-pipe.pipe';
+import { SafePipe } from './safe.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +28,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     AboutComponent,
     MarketplaceComponent,
-    GoodDetailComponent
+    GoodDetailComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ export class MarketplaceComponent implements OnInit {
   goods: FirebaseListObservable<any[]>;
 
 
-  constructor(public service: AlbumService, private router: Router) { }
+  constructor(private service: AlbumService, private router: Router) { }
 
   ngOnInit() {
     this.goods = this.service.getGoods();

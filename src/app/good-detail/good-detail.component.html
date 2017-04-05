@@ -22,6 +22,7 @@
           <label>quantity</label><br>
           <input value="{{(goodToDisplay | async)?.quantity}}" #quantity><br>
           <button (click)="beginUpdatingGood(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
+          <button (click)="beginDeletingGood()">Delete</button>
         </div>
       </div>
     </div>

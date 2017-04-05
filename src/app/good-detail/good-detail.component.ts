@@ -32,4 +32,8 @@ export class GoodDetailComponent implements OnInit {
      console.log(this.goodId);
   }
 
+  beginDeletingGood(){
+    this.albumService.deleteGood(this.goodId);
+  }
+
 }

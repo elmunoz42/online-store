@@ -5,7 +5,6 @@
     <div *ngFor="let good of goods | async" (click)="goToDetailPage(good)" class="panel panel-default">
       <div class="panel-body">
         <h3><em>{{good.title}}</em> by {{good.artist}} quantity {{good.quantity}}</h3>
-
       </div>
     </div>
   </div>

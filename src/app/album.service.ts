@@ -35,4 +35,9 @@ export class AlbumService {
                               });
   }
 
+  deleteGood(id: any){
+    var goodEntryInFirebase = this.getGoodById(id);
+    goodEntryInFirebase.remove();
+  }
+
 }

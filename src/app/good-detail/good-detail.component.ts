@@ -23,8 +23,8 @@ export class GoodDetailComponent implements OnInit {
      this.goodId = urlParameters['id'];
    });
    this.goodToDisplay = this.albumService.getGoodById(this.goodId);
-  //  var tempVideoUrl: string = this.goodToDisplay.videoUrl;
-  //    this.goodToDisplay.videoUrl = this.sanitizer.bypassSecurityTrustHtml(tempVideoUrl);
+   var tempVideoUrl: string = this.goodToDisplay.videoUrl;
+   this.goodToDisplay.videoUrl = "<img src='" + this.sanitizer.bypassSecurityTrustHtml(tempVideoUrl) + "' alt='' />";
 
   }
 

@@ -22,10 +22,13 @@ export class GoodDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
      this.goodId = urlParameters['id'];
    });
-   this.goodToDisplay = this.albumService.getGoodById(this.goodId);
-  //  var tempVideoUrl: string = this.goodToDisplay.videoUrl;
-  //    this.goodToDisplay.videoUrl = this.sanitizer.bypassSecurityTrustHtml(tempVideoUrl);
 
+   this.goodToDisplay = this.albumService.getGoodById(this.goodId);
+  }
+
+  beginUpdatingGood(title: string, artist: string, description: string, url: string, quantity: any){
+    var goodToUpdate: Good = new Good(title, artist, description, url, parseInt(quantity));
+     this.albumService.updateGood(goodToUpdate);
   }
 
 }

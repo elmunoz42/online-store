@@ -25,4 +25,14 @@ export class AlbumService {
     this.goods.push(newGood);
   }
 
+  updateGood(localUpdatedGood){
+    var goodEntryInFirebase = this.getGoodById(localUpdatedGood.$key);
+    goodEntryInFirebase.update({title: localUpdatedGood.title,
+                                artist: localUpdatedGood.artist,
+                                description: localUpdatedGood.description,
+                                videoUrl: localUpdatedGood.videoUrl,
+                                quantity: localUpdatedGood.quantity
+                              });
+  }
+
 }

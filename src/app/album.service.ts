@@ -25,8 +25,8 @@ export class AlbumService {
     this.goods.push(newGood);
   }
 
-  updateGood(localUpdatedGood){
-    var goodEntryInFirebase = this.getGoodById(localUpdatedGood.$key);
+  updateGood(localUpdatedGood: Good, id: any){
+    var goodEntryInFirebase = this.getGoodById(id);
     goodEntryInFirebase.update({title: localUpdatedGood.title,
                                 artist: localUpdatedGood.artist,
                                 description: localUpdatedGood.description,

@@ -7,20 +7,20 @@
       <h3>{{(goodToDisplay | async)?.title | uppercase}}</h3>
       <h4>{{(goodToDisplay | async)?.artist | uppercase}}</h4>
       <p>{{(goodToDisplay | async)?.description}}</p>
+      <p>{{(goodToDisplay | async)?.quantity}}</p>
       <div class="col-md-4 panel panel-default">
         <div class="panel-body" id="create-item">
           <h4>Edit Product</h4>
-          <h4>Add Product</h4>
           <label>title</label><br>
-          <input #title><br>
+          <input value="{{(goodToDisplay | async)?.title | uppercase}}" #title ><br>
           <label>artist</label><br>
-          <input #artist><br>
+          <input value="{{(goodToDisplay | async)?.artist | uppercase}}" #artist ><br>
           <label>description</label><br>
-          <input #description><br>
+          <input value="{{(goodToDisplay | async)?.description}}" #description><br>
           <label>url</label><br>
-          <input #url><br>
+          <input value="{{(goodToDisplay | async)?.videoUrl}}" #url><br>
           <label>quantity</label><br>
-          <input #quantity><br>
+          <input value="{{(goodToDisplay | async)?.quantity}}" #quantity><br>
           <button (click)="beginUpdatingGood(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
         </div>
       </div>

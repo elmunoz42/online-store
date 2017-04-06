@@ -8,10 +8,18 @@
       <li><a routerLink="marketplace">Marketplace</a></li>
     </ul>
   </div>
+  <!-- container -->
 </nav>
-<div class="">
-  <h1>
-    {{title}}
-  </h1>
-  <router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="title">{{title}}</h1>
+    </div>
+  </div>
+  <!-- row -->
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- row -->
 </div>
+<!-- container -->

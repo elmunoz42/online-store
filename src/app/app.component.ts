@@ -11,6 +11,6 @@ export class AppComponent {
 
 export class Good {
 
-  constructor(public title: string, public artist: string, public description: string, public videoUrl: string, public quantity: number) { }
+  constructor(public title: string, public artist: string, public description: string, public videoUrl: string, public quantity: number, public price: number) { }
 
 }

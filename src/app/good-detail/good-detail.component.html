@@ -1,14 +1,15 @@
-<div class="row">
-  <div class="col-md-6">
-    <img [src]="(goodToDisplay | async)?.videoUrl">
-  </div>
-  <div class="col-md-6">
-    <div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="(goodToDisplay | async)?.videoUrl">
+    </div>
+    <!-- left col -->
+    <div class="col-md-6">
       <h3>{{(goodToDisplay | async)?.title | uppercase}}</h3>
       <h4>{{(goodToDisplay | async)?.artist | uppercase}}</h4>
       <p>{{(goodToDisplay | async)?.description}}</p>
       <p>{{(goodToDisplay | async)?.quantity}}</p>
-      <div class="col-md-4 panel panel-default">
+      <div class="panel panel-default">
         <div class="panel-body" id="create-item">
           <h4>Edit Product</h4>
           <label>title</label><br>
@@ -21,10 +22,17 @@
           <input value="{{(goodToDisplay | async)?.videoUrl}}" #url><br>
           <label>quantity</label><br>
           <input value="{{(goodToDisplay | async)?.quantity}}" #quantity><br>
-          <button (click)="beginUpdatingGood(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
+          <label>price</label><br>
+          <input value="{{(goodToDisplay | async)?.price}}" #quantity><br>
+          <button (click)="beginUpdatingGood(title.value, artist.value, description.value, url.value, quantity.value, price.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''; price.value=''">Submit</button>
           <button (click)="beginDeletingGood()">Delete</button>
         </div>
+        <!-- form -->
       </div>
+      <!-- panel -->
     </div>
+    <!-- col -->
   </div>
+  <!-- row -->
 </div>
+<!-- container -->

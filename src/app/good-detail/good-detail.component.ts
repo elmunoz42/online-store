@@ -26,8 +26,8 @@ export class GoodDetailComponent implements OnInit {
    this.goodToDisplay = this.albumService.getGoodById(this.goodId);
   }
 
-  beginUpdatingGood(title: string, artist: string, description: string, url: string,  quantity: any){
-    var goodToUpdate: Good = new Good(title, artist, description, url, parseInt(quantity));
+  beginUpdatingGood(title: string, artist: string, description: string, url: string,  quantity: any, price: any){
+    var goodToUpdate: Good = new Good(title, artist, description, url, parseInt(quantity), parseInt(price));
      this.albumService.updateGood(goodToUpdate, this.goodId);
      console.log(this.goodId);
   }

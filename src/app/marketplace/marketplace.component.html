@@ -4,7 +4,7 @@
   <div class="col-md-8">
     <div *ngFor="let good of goods | async" (click)="goToDetailPage(good)" class="panel panel-default">
       <div class="panel-body">
-        <h3><em>{{good.title}}</em> by {{good.artist}} quantity {{good.quantity}}</h3>
+        <h3><em>{{good.title}}</em> by {{good.artist}} price: {{good.price}}, inventory {{good.quantity}}</h3>
       </div>
     </div>
   </div>
@@ -22,7 +22,9 @@
       <input #url><br>
       <label>quantity</label><br>
       <input #quantity><br>
-      <button (click)="submitForm(title.value, artist.value, description.value, url.value, quantity.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''">Submit</button>
+      <label>price</label><br>
+      <input #price><br>
+      <button (click)="submitForm(title.value, artist.value, description.value, url.value, quantity.value, price.value); title.value=''; artist.value=''; description.value=''; url.value=''; quantity.value=''; price.value=''">Submit</button>
     </div>
   </div>
 </div>

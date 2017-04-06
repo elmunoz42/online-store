@@ -25,8 +25,8 @@ export class MarketplaceComponent implements OnInit {
    this.router.navigate(['goods', clickedGood.$key]);
  };
 
- submitForm(title: string, artist: string, description: string, url: string, quantity: any){
-   var newGood: Good = new Good(title, artist, description, url, parseInt(quantity));
+ submitForm(title: string, artist: string, description: string, url: string, quantity: any, price: any){
+   var newGood: Good = new Good(title, artist, description, url, parseInt(quantity), parseFloat(price));
    this.service.addGood(newGood);
  }
 
